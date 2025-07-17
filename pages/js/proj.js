@@ -30,20 +30,26 @@ function initializeNavigation() {
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 100;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-                
-                // Update active link immediately
-                updateActiveLink(this);
+            const navLinksMenu = document.querySelector('.nav-links');
+            const href = this.getAttribute('href');
+            const isExternal = href.startsWith('http') || this.target === '_blank';
+
+            // فقط للروابط الداخلية ومع القائمة الجانبية النشطة
+            if (!isExternal && navLinksMenu.classList.contains('active')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    updateActiveLink(this);
+                }
+                navLinksMenu.classList.remove('active');
             }
+            // الروابط الخارجية تعمل دائماً بشكل طبيعي
         });
     });
     
@@ -348,55 +354,13 @@ window.addEventListener('scroll', debouncedScrollHandler);
 
 // Global theme toggle function (for onclick in HTML)
 function toggleTheme() {
-    document.querySelector('.theme-toggle').click();
+  document.body.classList.toggle('dark-theme');
 }
-
 
 // Mobile Menu Toggle Function
 function toggleMobileMenu() {
   const navLinks = document.querySelector('.nav-links');
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const menuIcon = menuToggle.querySelector('i');
-  
   navLinks.classList.toggle('active');
-  
-  // Change icon based on menu state
-  if (navLinks.classList.contains('active')) {
-    menuIcon.classList.remove('fa-bars');
-    menuIcon.classList.add('fa-times');
-  } else {
-    menuIcon.classList.remove('fa-times');
-    menuIcon.classList.add('fa-bars');
-  }
 }
 
-// Close mobile menu when clicking on a navigation link
-document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const navLinksContainer = document.querySelector('.nav-links');
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinksContainer.classList.contains('active')) {
-        navLinksContainer.classList.remove('active');
-        const menuIcon = menuToggle.querySelector('i');
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-      }
-    });
-  });
-  
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.navbar') && navLinksContainer.classList.contains('active')) {
-      navLinksContainer.classList.remove('active');
-      const menuIcon = menuToggle.querySelector('i');
-      menuIcon.classList.remove('fa-times');
-      menuIcon.classList.add('fa-bars');
-    }
-  });
-});
-
-// Add mobile menu toggle functionality
-document.querySelector('.mobile-menu-toggle').addEventListener('click', toggleMobileMenu);
+// لا تضع أي كود لإغلاق القائمة الجانبية هنا حتى لا تؤثر على الروابط الخارجية

@@ -4,15 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yousef Ahmad's Portfolio - A passionate student exploring technology and innovation">
+  <meta name="keywords" content="portfolio, student, technology, innovation, web development">
+  <meta name="author" content="Yousef Ahmad">
   <title>Yousef's Portfolio</title>
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
   <nav class="navbar">
     <h1 class="logo">Yousef</h1>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
     <ul class="nav-links">
       <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -41,6 +49,61 @@
       </div>
     </section>
 
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="education-content">
+        <div class="education-header">
+          <h3>Al-Azhar University</h3>
+          <span class="education-year">2023 - Present</span>
+        </div>
+        <div class="education-degree">
+          <strong>2nd Year Student – 1st Year in Systems & Computer Engineering</strong>
+        </div>
+        <div class="education-achievement">
+          <p>🏆 Ranked among the top students during preparatory year</p>
+        </div>
+        
+        <div class="education-description">
+          <p>I am a passionate Systems & Computer Engineering student at Al-Azhar University, currently in my second year of study and the first year in my specialization. I ranked among the top students during my preparatory year.</p>
+          
+          <p>With a strong foundation in Java, C++, OOP, Data Structures, and Algorithms, I am eager to apply my skills in real-world projects and contribute to the tech industry. I am actively seeking internship opportunities to gain hands-on experience and expand my knowledge.</p>
+        </div>
+
+        <div class="skills-section">
+          <h4>Technical Skills</h4>
+          <div class="skills-grid">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+          </div>
+        </div>
+
+        <div class="activities-section">
+          <h4>Activities & Leadership</h4>
+          <div class="activity-item">
+            <div class="activity-header">
+              <strong>Scout Leader</strong>
+              <span class="activity-org">Al-Salam Scouts Group, Al Rehab Club</span>
+            </div>
+            <ul class="activity-list">
+              <li>Leading and mentoring youth in a wide range of scouting activities</li>
+              <li>Organizing community service projects, camps, and workshops that enhance leadership, teamwork, and problem-solving skills</li>
+              <li>Promoting personal growth and responsibility through outdoor challenges</li>
+            </ul>
+          </div>
+          
+          <div class="activity-item">
+            <div class="activity-header">
+              <strong>Tennis Enthusiast</strong>
+            </div>
+            <p>Active participant in tennis activities, developing discipline and competitive spirit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="section">
       <h2>My Projects</h2>
       <ul>
@@ -53,6 +116,12 @@
       <h2>Contact Me</h2>
       <p>You can email me at:</p>
       <a class="email" href="https://mail.google.com/mail/?view=cm&fs=1&to=yousofahamad158@gmail.com" target="_blank">yousofahamad158@gmail.com</a>
+      <p>Connect with me:</p>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/yousof-ahmad-5187011b9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="https://github.com/yousof158" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://wa.me/+201555935967" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
     </section>
   </main>
 
@@ -61,7 +130,7 @@
   </footer>
 
   <script src="/js/proj.js"></script>
-  <link rel="stylesheet" href="/styles/style.css">
 </body>
 
 </html>
+

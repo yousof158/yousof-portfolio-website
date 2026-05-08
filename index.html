@@ -1,136 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Yousef Ahmad's Portfolio - A passionate student exploring technology and innovation">
-  <meta name="keywords" content="portfolio, student, technology, innovation, web development">
-  <meta name="author" content="Yousof Ahmad">
-  <title>Yousof's Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <title>Yousof Ahmad | Software & AI Engineer</title>
+  <meta name="description" content="Yousof Ahmad — Systems & Computer Engineering student. AI developer, competitive programmer, and Scout Leader.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <nav class="navbar">
-    <h1 class="logo">Yousof Ahmad portfolio</h1>
-    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
+<body class="font-en dark-theme">
+
+  <div class="cursor-dot"></div>
+
+  <div class="animated-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <nav class="navbar glass">
+    <div class="nav-logo">
+      <span class="logo-dot"></span>
+      <h1 class="logo" data-en="Yousof Ahmad" data-ar="يوسف أحمد">Yousof Ahmad</h1>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-en="About" data-ar="عني">About</a></li>
+      <li><a href="#education" data-en="Education" data-ar="التعليم">Education</a></li>
+      <li><a href="#projects" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+      <li><a href="#leadership" data-en="Leadership" data-ar="القيادة">Leadership</a></li>
+      <li><a href="#honors" data-en="Awards" data-ar="الجوائز">Awards</a></li>
+      <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
     </ul>
-    <button onclick="toggleTheme()" class="theme-toggle">🌙</button>
+    <div class="nav-actions">
+      <button onclick="toggleLang()" class="lang-toggle glow-btn magnetic">
+        🌐 <span class="lang-text">العربية</span>
+      </button>
+      <a href="https://drive.google.com/file/d/12TNDp98-9R28hCUgxnwkr3_OsXAKWh-6/view?usp=sharing" target="_blank" class="download-btn glow-btn magnetic" data-en="📄 Download CV" data-ar="📄 تحميل السيرة الذاتية">📄 Download CV</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <header class="hero">
-    <h2>Welcome to My Portfolio</h2>
-    <p>I'm a passionate student exploring the world of technology and innovation.</p>
+  <header id="hero" class="hero reveal active">
+    <div class="hero-content glass tilt-card">
+      <div class="hero-badge" data-en="Available for Opportunities" data-ar="متاح للفرص">Available for Opportunities</div>
+      <h2 class="hero-title" data-en="Building Scalable Software & AI Solutions" data-ar="بناء أنظمة برمجية وحلول ذكاء اصطناعي عملية">
+        Building Scalable Software & AI Solutions
+      </h2>
+      <p class="hero-sub" data-en="Systems & Computer Engineering student focused on competitive programming, OOP, and real-world applications using Java and Python." data-ar="طالب بهندسة النظم والحاسبات، مهتم بالبرمجة التنافسية وتصميم الأنظمة (OOP)، وتطوير تطبيقات فعلية باستخدام Java و Python.">
+        Systems & Computer Engineering student focused on competitive programming, OOP, and real-world applications using Java and Python.
+      </p>
+      <div class="hero-actions">
+        <a href="https://drive.google.com/file/d/12TNDp98-9R28hCUgxnwkr3_OsXAKWh-6/view?usp=sharing" target="_blank" class="main-btn magnetic" data-en="View My Resume" data-ar="شاهد سيرتي الذاتية">View My Resume</a>
+        <a href="#contact" class="outline-btn magnetic" data-en="Let's Connect" data-ar="تواصل معي">Let's Connect</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">92.5%</span><span class="stat-label" data-en="Academic Grade" data-ar="التقدير الأكاديمي">Academic Grade</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">80+</span><span class="stat-label" data-en="Youth Managed" data-ar="شبل تحت إدارتي">Youth Managed</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label" data-en="Live Projects" data-ar="مشاريع حقيقية">Live Projects</span></div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>I am a dedicated university student passionate about technology and education. I have always aimed for excellence in my academic career.</p>
-      <p class="arabic">أنا طالب جامعي شغوف بالتكنولوجيا والتعليم، وأسعى دائمًا للتفوق في مسيرتي الأكاديمية.</p>
-      <div class="image-group">
-        <div class="img-box">
-          <img src="images/IMG-20240805-WA0003.jpg" alt="Personal Photo">
-          <p class="caption">صورتي الشخصية.</p>
+    <section id="about" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Who I Am" data-ar="من أنا">Who I Am</span>
+        <h2 class="section-title" data-en="Impact & Exhibitions" data-ar="التأثير والمعارض">Impact & Exhibitions</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text glass">
+          <p data-en="Top-ranked Computer Engineering student at Al-Azhar University (92.5%), with deep focus on Java, Python, and AI systems. I bridge the gap between theory and real-world impact — from building AI proctoring systems to competing in collegiate programming contests." data-ar="طالب هندسة حاسبات متفوق في جامعة الأزهر (92.5%)، مع تركيز عميق على Java وPython وأنظمة الذكاء الاصطناعي. أربط بين النظرية والتأثير الحقيقي — من بناء أنظمة مراقبة الامتحانات بالذكاء الاصطناعي إلى المنافسة في مسابقات البرمجة الجامعية.">
+            Top-ranked Computer Engineering student at Al-Azhar University (92.5%), with deep focus on Java, Python, and AI systems. I bridge the gap between theory and real-world impact — from building AI proctoring systems to competing in collegiate programming contests.
+          </p>
+          <div class="tech-stack">
+            <span>Python</span><span>Java</span><span>YOLOv8</span>
+            <span>OpenCV</span><span>OOP</span><span>DSA</span>
+            <span>React</span><span>Git</span>
+          </div>
         </div>
-        <div class="img-box">
-          <img src="images/WhatsApp Image 2025-07-17 at 9.08.30 AM.jpeg" alt="Award Ceremony">
-          <p class="caption">تكريمي من عميد الكلية لاختياري من أوائل الدفعة.</p>
+        <div class="img-box glass tilt-card">
+          <img src="images/Azex (1).jpg" alt="AZEX Engineering Exhibition" onerror="this.closest('.img-box').classList.add('img-missing')">
+          <p class="caption" data-en="Presenting AI projects to VIPs at the AZEX Engineering Exhibition." data-ar="عرض مشاريعي التقنية على كبار الزوار في معرض أزيكس الهندسي.">
+            Presenting AI projects to VIPs at the AZEX Engineering Exhibition.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div class="education-content">
-        <div class="education-header">
-          <h3>Al-Azhar University</h3>
-          <span class="education-year">2023 - Present</span>
-        </div>
-        <div class="education-degree">
-          <strong>2nd Year Student – 1st Year in Systems & Computer Engineering</strong>
-        </div>
-        <div class="education-achievement">
-          <p>🏆 Ranked among the top students during preparatory year</p>
-        </div>
-        
-        <div class="education-description">
-          <p>I am a passionate Systems & Computer Engineering student at Al-Azhar University, currently in my second year of study and the first year in my specialization. I ranked among the top students during my preparatory year.</p>
-          
-          <p>With a strong foundation in Java, C++, OOP, Data Structures, and Algorithms, I am eager to apply my skills in real-world projects and contribute to the tech industry. I am actively seeking internship opportunities to gain hands-on experience and expand my knowledge.</p>
-        </div>
-
-        <div class="skills-section">
-          <h4>Technical Skills</h4>
-          <div class="skills-grid">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">OOP</span>
-            <span class="skill-tag">Data Structures</span>
-            <span class="skill-tag">Algorithms</span>
-          </div>
-        </div>
-
-        <div class="activities-section">
-          <h4>Activities & Leadership</h4>
-          <div class="activity-item">
-            <div class="activity-header">
-              <strong>Scout Leader</strong>
-              <span class="activity-org">Al-Salam Scouts Group, Al Rehab Club</span>
+    <section id="education" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Background" data-ar="الخلفية">Background</span>
+        <h2 class="section-title" data-en="Education" data-ar="التعليم">Education</h2>
+      </div>
+      <div class="edu-card glass tilt-card">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-body">
+          <div class="edu-header">
+            <div>
+              <h3 data-en="Al-Azhar University" data-ar="جامعة الأزهر">Al-Azhar University</h3>
+              <p class="edu-degree" data-en="Bachelor of Engineering — Systems & Computer Engineering" data-ar="بكالوريوس الهندسة — قسم هندسة النظم والحاسبات">
+                Bachelor of Engineering — Systems & Computer Engineering
+              </p>
             </div>
-            <ul class="activity-list">
-              <li>Leading and mentoring youth in a wide range of scouting activities</li>
-              <li>Organizing community service projects, camps, and workshops that enhance leadership, teamwork, and problem-solving skills</li>
-              <li>Promoting personal growth and responsibility through outdoor challenges</li>
-            </ul>
-          </div>
-          
-          <div class="activity-item">
-            <div class="activity-header">
-              <strong>Tennis Enthusiast</strong>
+            <div class="edu-meta">
+              <span class="badge">2023 – Present</span>
+              <span class="grade-badge">92.5% Excellent</span>
             </div>
-            <p>Active participant in tennis activities, developing discipline and competitive spirit</p>
+          </div>
+          <div class="edu-highlights">
+            <div class="highlight">
+              <i class="fas fa-trophy"></i>
+              <span data-en="Ranked 1st in class (1st Year)" data-ar="الأول على الدفعة (السنة الأولى)">Ranked 1st in class (1st Year)</span>
+            </div>
+            <div class="highlight">
+              <i class="fas fa-code"></i>
+              <span data-en="ECPC Competitor — Team Bug Hunters (4th Place Faculty Level)" data-ar="متسابق ECPC — فريق Bug Hunters (المركز الرابع على مستوى الكلية)">ECPC Competitor — Team Bug Hunters (4th Place Faculty Level)</span>
+            </div>
+          </div>
+          <div class="skills-tags">
+            <span>Python</span><span>Java</span><span>YOLOv8</span>
+            <span>Computer Vision</span><span>React</span><span>OOP</span><span>DSA</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2>My Projects</h2>
-      <ul>
-        <li><a href="https://al-azhar-electronics.netlify.app/projects/47" target="_blank">Digital Counter with Arduino</a></li>
-        <li>Making Speaker from Scratch</li>
-      </ul>
+    <section id="projects" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="What I've Built" data-ar="ما بنيته">What I've Built</span>
+        <h2 class="section-title" data-en="Featured Projects" data-ar="أبرز المشاريع">Featured Projects</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card glass tilt-card" style="transition-delay: 0s;">
+          <div class="card-top">
+            <div class="card-icon ai"><i class="fas fa-brain"></i></div>
+            <a href="https://yousof2026.github.io/Yousof-Fair-exam-live/" target="_blank" class="card-link magnetic" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <h3><a href="https://yousof2026.github.io/Yousof-Fair-exam-live/" target="_blank" class="project-title-link" data-en="FairExam — AI Proctoring System" data-ar="FairExam — نظام مراقبة بالذكاء الاصطناعي">FairExam — AI Proctoring System</a></h3>
+          <p data-en="Real-time exam monitoring at 30+ FPS. YOLOv8 detects violations with 92%+ mAP. Multi-layer face recognition with 98%+ accuracy." data-ar="مراقبة الامتحانات لحظياً بمعدل 30+ إطار/ثانية. YOLOv8 يكشف المخالفات بدقة 92%+. تعرف متعدد الطبقات على الوجه بدقة 98%+.">
+            Real-time exam monitoring at 30+ FPS. YOLOv8 detects violations with 92%+ mAP. Multi-layer face recognition with 98%+ accuracy.
+          </p>
+          <div class="skills-tags"><span>Python</span><span>YOLOv8</span><span>OpenCV</span><span>Face Recognition</span></div>
+        </div>
+
+        <div class="card glass tilt-card" style="transition-delay: 0.09s;">
+          <div class="card-top">
+            <div class="card-icon java"><i class="fas fa-briefcase"></i></div>
+            <a href="https://github.com/yousof158/PayrollSystem" target="_blank" class="card-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <h3><a href="https://github.com/yousof158/PayrollSystem" target="_blank" class="project-title-link" data-en="Payroll System" data-ar="نظام إدارة الرواتب">Payroll System</a></h3>
+          <p data-en="Desktop app for employee record management and compensation calculation. Serialization-based secure data persistence." data-ar="تطبيق سطح مكتب لإدارة سجلات الموظفين وحساب الرواتب. حفظ البيانات بشكل آمن باستخدام Java Serialization.">
+            Desktop app for employee record management and compensation calculation. Serialization-based secure data persistence.
+          </p>
+          <div class="skills-tags"><span>Java</span><span>Java Swing</span><span>Maven</span><span>OOP</span></div>
+        </div>
+
+        <div class="card glass tilt-card" style="transition-delay: 0.18s;">
+          <div class="card-top">
+            <div class="card-icon java"><i class="fas fa-users"></i></div>
+            <a href="https://github.com/yousof158/Student-Management-System" target="_blank" class="card-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <h3><a href="https://github.com/yousof158/Student-Management-System" target="_blank" class="project-title-link" data-en="Student Management System" data-ar="نظام إدارة الطلاب">Student Management System</a></h3>
+          <p data-en="Scalable system using Inheritance and Polymorphism to process 100+ student records with optimized DSA-based search and sorting." data-ar="نظام قابل للتوسع باستخدام الوراثة والتعددية الشكلية لمعالجة 100+ سجل طالب مع بحث وترتيب محسّن بخوارزميات DSA.">
+            Scalable system using Inheritance and Polymorphism to process 100+ student records with optimized DSA-based search and sorting.
+          </p>
+          <div class="skills-tags"><span>Java</span><span>OOP</span><span>DSA</span></div>
+        </div>
+
+        <div class="card glass tilt-card" style="transition-delay: 0.27s;">
+          <div class="card-top">
+            <div class="card-icon python"><i class="fas fa-wallet"></i></div>
+            <a href="https://github.com/yousof158/expenses-tracker-Yousof-ahmad" target="_blank" class="card-link magnetic" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <h3><a href="https://github.com/yousof158/expenses-tracker-Yousof-ahmad" target="_blank" class="project-title-link" data-en="Personal Expense Tracker" data-ar="متتبع المصروفات الشخصية">Personal Expense Tracker</a></h3>
+          <p data-en="GUI desktop app with real-time currency conversion via external API and secure environment variable management." data-ar="تطبيق سطح مكتب بواجهة رسومية مع تحويل عملات فوري وإدارة آمنة لمتغيرات البيئة.">
+            GUI desktop app with real-time currency conversion via external API and secure environment variable management.
+          </p>
+          <div class="skills-tags"><span>Python</span><span>Tkinter</span><span>REST API</span></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>You can email me at:</p>
-      <a class="email" href="https://mail.google.com/mail/?view=cm&fs=1&to=yousof.a.ramzy@gmail.com" target="_blank">yousof.a.ramzy@gmail.com</a>
-      <p>Connect with me:</p>
+    <section id="leadership" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Beyond Code" data-ar="خارج الكود">Beyond Code</span>
+        <h2 class="section-title" data-en="Leadership & Volunteering" data-ar="القيادة والعمل التطوعي">Leadership & Volunteering</h2>
+      </div>
+      <div class="leadership-grid">
+        <div class="card glass tilt-card leadership-card" style="transition-delay: 0s;">
+          <div class="card-top">
+            <div class="card-icon scout"><i class="fas fa-campground"></i></div>
+          </div>
+          <h3 data-en="Youth Leader & Coordinator" data-ar="قائد كشفي ومنسق">Youth Leader & Coordinator</h3>
+          <p class="org-name" data-en="El-Salam Scout Groups · Nov 2023 – Present" data-ar="مجموعات السلام الكشفية · نوفمبر 2023 – حتى الآن">El-Salam Scout Groups · Nov 2023 – Present</p>
+          <ul class="leadership-list">
+            <li data-en="Managing 80+ youth members with structured weekly programs." data-ar="إدارة أكثر من 80 شبلاً ببرامج أسبوعية منظمة.">Managing 80+ youth members with structured weekly programs.</li>
+            <li data-en="Organized a competition for 150+ participants — end-to-end planning." data-ar="نظّمت مسابقة لأكثر من 150 مشاركاً — تخطيط شامل من البداية للنهاية.">Organized a competition for 150+ participants — end-to-end planning.</li>
+            <li data-en="Certified Official Scout Leader — Boy Scouts of Egypt (Dec 2025)." data-ar="قائد كشفي رسمي معتمد — كشافة مصر (ديسمبر 2025).">Certified Official Scout Leader — Boy Scouts of Egypt (Dec 2025).</li>
+          </ul>
+          <div class="skills-tags" style="margin-top:1.2rem;">
+            <span data-en="Team Leadership" data-ar="قيادة الفريق">Team Leadership</span>
+            <span data-en="Event Planning" data-ar="تنظيم الفعاليات">Event Planning</span>
+            <span data-en="Mentorship" data-ar="التوجيه">Mentorship</span>
+          </div>
+        </div>
+
+        <div class="storytelling-card glass tilt-card" style="transition-delay: 0.09s;">
+          <div class="storytelling-img-wrap">
+            <img src="images/during cermony.jpg" alt="Scout Leader Honoring Ceremony" onerror="this.closest('.storytelling-card').classList.add('img-missing')">
+            <div class="storytelling-overlay">
+              <i class="fas fa-award storytelling-icon"></i>
+            </div>
+          </div>
+          <div class="storytelling-caption">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p data-en="Honored as a Scout Leader for exceptional mentorship and community impact." data-ar="تكريمي كقائد كشفي لجهودي المتميزة في التوجيه والتأثير المجتمعي.">
+              Honored as a Scout Leader for exceptional mentorship and community impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="honors" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Recognition" data-ar="التقدير">Recognition</span>
+        <h2 class="section-title" data-en="Honors & Awards" data-ar="الجوائز والتكريمات">Honors & Awards</h2>
+      </div>
+      <div class="honors-grid">
+        <div class="honor-card glass tilt-card" style="transition-delay: 0s;">
+          <div class="honor-rank">01</div>
+          <div class="honor-body">
+            <i class="fas fa-medal honor-icon gold"></i>
+            <h3 data-en="1st Rank in Class" data-ar="الأول على الدفعة">1st Rank in Class</h3>
+            <p data-en="Systems & Computer Engineering Dept. — 92.5% (Excellent)" data-ar="قسم هندسة النظم والحاسبات — 92.5% (امتياز)">Systems & Computer Engineering Dept. — 92.5% (Excellent)</p>
+          </div>
+        </div>
+        <div class="honor-card glass tilt-card" style="transition-delay: 0.09s;">
+          <div class="honor-rank">02</div>
+          <div class="honor-body">
+            <i class="fas fa-code honor-icon cyan"></i>
+            <h3 data-en="4th Place — ECPC" data-ar="المركز الرابع — ECPC">4th Place — ECPC</h3>
+            <p data-en="Egyptian Collegiate Programming Contest · Faculty Level · Team Bug Hunters" data-ar="تصفيات البرمجة الجامعية المصرية · مستوى الكلية · فريق Bug Hunters">Egyptian Collegiate Programming Contest · Faculty Level · Team Bug Hunters</p>
+          </div>
+        </div>
+        <div class="honor-card glass tilt-card" style="transition-delay: 0.18s;">
+          <div class="honor-rank">03</div>
+          <div class="honor-body">
+            <i class="fas fa-star honor-icon purple"></i>
+            <h3 data-en="6th Rank — Preparatory Year" data-ar="المركز السادس — السنة التحضيرية">6th Rank — Preparatory Year</h3>
+            <p data-en="Out of 1,000+ students in the Engineering Preparatory Year." data-ar="من بين أكثر من 1000 طالب في السنة التحضيرية للهندسة.">Out of 1,000+ students in the Engineering Preparatory Year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Learning" data-ar="التعلم">Learning</span>
+        <h2 class="section-title" data-en="Certifications" data-ar="الشهادات">Certifications</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card glass" style="transition-delay: 0s;">
+          <i class="fas fa-laptop-code cert-icon"></i>
+          <p data-en="Front-End Web Development Diploma — Almdrasa (Ongoing)" data-ar="دبلومة تطوير واجهات الويب — المدرسة (جارٍ)">Front-End Web Development Diploma — Almdrasa (Ongoing)</p>
+        </div>
+        <div class="cert-card glass" style="transition-delay: 0.09s;">
+          <i class="fas fa-campground cert-icon"></i>
+          <p data-en="Official Scout Leader Qualification — Boy Scouts of Egypt (Dec 2025)" data-ar="شارة القيادة الكشفية الرسمية — كشافة مصر (ديسمبر 2025)">Official Scout Leader Qualification — Boy Scouts of Egypt (Dec 2025)</p>
+        </div>
+        <div class="cert-card glass" style="transition-delay: 0.18s;">
+          <i class="fas fa-globe cert-icon"></i>
+          <p data-en="Introduction to Web Technologies (60 hrs) — ITI" data-ar="مقدمة في تقنيات الويب (60 ساعة) — معهد تكنولوجيا المعلومات ITI">Introduction to Web Technologies (60 hrs) — ITI</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-header">
+        <span class="section-tag" data-en="Reach Out" data-ar="تواصل">Reach Out</span>
+        <h2 class="section-title" data-en="Let's Connect" data-ar="تواصل معي">Let's Connect</h2>
+      </div>
+      <p class="contact-intro" data-en="Open to internships, collaborations, and exciting opportunities." data-ar="متاح للتدريب والتعاون والفرص المثيرة.">
+        Open to internships, collaborations, and exciting opportunities.
+      </p>
       <ul class="social-links">
-        <li><a href="https://www.linkedin.com/in/yousof-ahmad-5187011b9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://github.com/yousof158" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://wa.me/+201555935967" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="https://www.linkedin.com/in/yousof-ahmad-eng" target="_blank" class="glass magnetic"><i class="fab fa-linkedin"></i> <span>LinkedIn</span></a></li>
+        <li><a href="https://github.com/yousof158" target="_blank" class="glass magnetic"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+        <li><a href="https://wa.me/+201555935967" target="_blank" class="glass magnetic"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a></li>
+        <li><a href="mailto:yousof.a.ramzy@gmail.com" class="glass magnetic"><i class="fas fa-envelope"></i> <span>Email</span></a></li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Yousof Ahmad. All rights reserved.</p>
+  <footer class="glass">
+    <p data-en="© 2026 Yousof Ahmad · Built with Passion & Code." data-ar="© 2026 يوسف أحمد · صُنع بشغف وكود.">
+      © 2026 Yousof Ahmad · Built with Passion & Code.
+    </p>
   </footer>
 
-  <script src="js/proj.js"></script>
+  <script src="proj.js"></script>
 </body>
-
 </html>
-
